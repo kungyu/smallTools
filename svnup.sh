@@ -1,5 +1,5 @@
 #! /bin/bash
-#svn update > update.txt &&
+svn update > update.txt &&
 CURRPATH=$(pwd)
 FILENAME='update.txt'
 UPDATEPATH=$CURRPATH'/update_dir'
