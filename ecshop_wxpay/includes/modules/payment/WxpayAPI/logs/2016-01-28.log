@@ -1,0 +1,7 @@
+[2016-01-28 14:02:02][debug] begin notify
+[2016-01-28 14:03:03][debug] begin notify
+[2016-01-28 15:21:46][debug] begin notify
+[2016-01-28 15:21:46][debug] call back:{"appid":"wx55fa7c95b13e6b87","attach":"iwchina","bank_type":"COMM_DEBIT","cash_fee":"1","fee_type":"CNY","is_subscribe":"Y","mch_id":"1234157802","nonce_str":"s86gn3879rbl07qgknmk6x96shcjqjxd","openid":"obxHTsqoQ9-a-uEnk9bmt6nse_mk","out_trade_no":"1234157802151","result_code":"SUCCESS","return_code":"SUCCESS","sign":"741255B84DA0F62301CC2B14AA985EA9","time_end":"20160128152145","total_fee":"1","trade_type":"NATIVE","transaction_id":"1008890070201601282953686943"}
+[2016-01-28 15:21:46][debug] query:{"appid":"wx55fa7c95b13e6b87","attach":"iwchina","bank_type":"COMM_DEBIT","cash_fee":"1","fee_type":"CNY","is_subscribe":"Y","mch_id":"1234157802","nonce_str":"v6D0fUylNPQaRuns","openid":"obxHTsqoQ9-a-uEnk9bmt6nse_mk","out_trade_no":"1234157802151","result_code":"SUCCESS","return_code":"SUCCESS","return_msg":"OK","sign":"51BFBCC2EDB38D7DACEE8BF792B19EA1","time_end":"20160128152145","total_fee":"1","trade_state":"SUCCESS","trade_type":"NATIVE","transaction_id":"1008890070201601282953686943"}
+[2016-01-28 16:40:19][debug] begin notify
+[2016-01-28 16:43:23][debug] begin notify
