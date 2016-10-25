@@ -1,0 +1,30 @@
+ 	<link href="css/flexslider.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+
+	<div class="row ">
+		<div class="swiper-container" id="swiper" style="visibility: visible;">				
+			<div class="flexslider">
+				<ul class="slides">
+				      <li back=''><a href="affiche.php?ad_id=194&uri=" title="108" target="_blank"><img name="ad_img" src="../data/afficheimg/1475860068670483239.jpg" alt="108" /></a></li>
+				      <li back=''><a href="affiche.php?ad_id=195&uri=" title="首页banner-兰韵系列" target="_blank"><img name="ad_img" src="../data/afficheimg/1477268735497184594.jpg" alt="首页banner-兰韵系列" /></a></li>
+				      <li back=''><a href="affiche.php?ad_id=196&uri=" title="首页banner-田园系列" target="_blank"><img name="ad_img" src="../data/afficheimg/1477269049027166921.jpg" alt="首页banner-田园系列" /></a></li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+			    $(function() {
+				$('.flexslider').flexslider({
+				     animation: "slide",
+				     slideDirection: "horizontal",
+				     slideshowSpeed: 2000,
+				     slideshow: true,
+				      pauseOnHover: false
+				//使用滑动后暂停功能,可以开启flexslide-min.js 中的pause() 函数.
+				 });
+			    });
+
+			</script>
+		</div>
+	</div>
+
+
