@@ -1,0 +1,18 @@
+<script>
+		/*链接后面加网页地址后面加上?_wv=3 禁止qq分享*/
+/*以下为微信分享的禁止代码*/
+		function onBridgeReady(){
+			WeixinJSBridge.call('hideOptionMenu');
+		}
+
+		if (typeof WeixinJSBridge == "undefined"){
+			if( document.addEventListener ){
+				document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+			}else if (document.attachEvent){
+				document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+				document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+			}
+		}else{
+			onBridgeReady();
+		}
+	</script>
