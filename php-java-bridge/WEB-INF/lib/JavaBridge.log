@@ -1,0 +1,353 @@
+Dec 06 10:12:29 JavaBridge INFO : VM                  : 1.8.0_111@http://java.oracle.com/
+Dec 06 10:12:29 JavaBridge INFO : JavaBridge version             : 6.2.1    
+Dec 06 10:12:29 JavaBridge INFO : logFile             : JavaBridge.log
+Dec 06 10:12:29 JavaBridge INFO : default logLevel    : 3
+Dec 06 10:12:29 JavaBridge INFO : socket              : HTTP_LOCAL:8080
+Dec 06 10:12:29 JavaBridge INFO : java.ext.dirs       : /usr/lib/jdk/jre/lib/ext:/usr/java/packages/lib/ext
+Dec 06 10:12:29 JavaBridge INFO : php.java.bridge.base: /root
+Dec 06 10:12:29 JavaBridge INFO : thread pool size    : 20
+Dec 06 10:12:29 JavaBridge INFO : JavaBridgeRunner started on port INET_LOCAL:8080
+Dec 06 10:14:26 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:28 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:28 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:28 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:29 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:29 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:29 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:29 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:30 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:30 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:30 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:30 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:14:31 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:15:16 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:18:42 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:18:43 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:18:43 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:18:44 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:18:44 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:18:44 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:18:45 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:18:45 JavaBridge ERROR: An exception occured: php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+php.java.bridge.NoSuchProcedureException: static test([o:PhpParserString]). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1084)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 10:21:03 JavaBridge ERROR: An exception occured: java.lang.NoSuchMethodException: getProperties(). Candidates: []
+java.lang.NoSuchMethodException: getProperties(). Candidates: []
+	at php.java.bridge.JavaBridge.checkM(JavaBridge.java:1085)
+	at php.java.bridge.JavaBridge.Invoke(JavaBridge.java:1024)
+	at php.java.bridge.Request.handleRequest(Request.java:417)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 13:11:40 JavaBridge ERROR: An exception occured: java.lang.ClassNotFoundException: DZ008Request
+java.lang.ClassNotFoundException: DZ008Request
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at php.java.bridge.Util.classForName(Util.java:1518)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:445)
+	at php.java.bridge.Request.handleRequest(Request.java:458)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Dec 06 13:11:52 JavaBridge ERROR: An exception occured: java.lang.ClassNotFoundException: Unresolved external reference: java.lang.NoClassDefFoundError: org/apache/log4j/Logger. -- Unable to call constructor, see the README section "Java platform issues" for details and DO NOT REPORT THIS PROBLEM TO THE PHP/Java Bridge MAILING LIST!
+java.lang.ClassNotFoundException: Unresolved external reference: java.lang.NoClassDefFoundError: org/apache/log4j/Logger. -- Unable to call constructor, see the README section "Java platform issues" for details and DO NOT REPORT THIS PROBLEM TO THE PHP/Java Bridge MAILING LIST!
+	at php.java.bridge.JavaBridge.getUnresolvedExternalReferenceException(JavaBridge.java:422)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:498)
+	at php.java.bridge.Request.handleRequest(Request.java:458)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Caused by: java.lang.NoClassDefFoundError: org/apache/log4j/Logger
+	at com.hitrust.B2B.request.GenericRequest.<clinit>(GenericRequest.java:57)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at php.java.bridge.Util.classForName(Util.java:1518)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:445)
+	... 7 more
+Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Logger
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 12 more
+Dec 06 13:11:53 JavaBridge ERROR: An exception occured: java.lang.ClassNotFoundException: Unresolved external reference: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request. -- Unable to call constructor, see the README section "Java platform issues" for details and DO NOT REPORT THIS PROBLEM TO THE PHP/Java Bridge MAILING LIST!
+java.lang.ClassNotFoundException: Unresolved external reference: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request. -- Unable to call constructor, see the README section "Java platform issues" for details and DO NOT REPORT THIS PROBLEM TO THE PHP/Java Bridge MAILING LIST!
+	at php.java.bridge.JavaBridge.getUnresolvedExternalReferenceException(JavaBridge.java:422)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:498)
+	at php.java.bridge.Request.handleRequest(Request.java:458)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at php.java.bridge.Util.classForName(Util.java:1518)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:445)
+	... 7 more
+Dec 06 13:22:49 JavaBridge ERROR: An exception occured: java.lang.ClassNotFoundException: Unresolved external reference: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request. -- Unable to call constructor, see the README section "Java platform issues" for details and DO NOT REPORT THIS PROBLEM TO THE PHP/Java Bridge MAILING LIST!
+java.lang.ClassNotFoundException: Unresolved external reference: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request. -- Unable to call constructor, see the README section "Java platform issues" for details and DO NOT REPORT THIS PROBLEM TO THE PHP/Java Bridge MAILING LIST!
+	at php.java.bridge.JavaBridge.getUnresolvedExternalReferenceException(JavaBridge.java:422)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:498)
+	at php.java.bridge.Request.handleRequest(Request.java:458)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at php.java.bridge.Util.classForName(Util.java:1518)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:445)
+	... 7 more
+Dec 06 14:47:40 JavaBridge ERROR: An exception occured: java.lang.ClassNotFoundException: Unresolved external reference: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request. -- Unable to call constructor, see the README section "Java platform issues" for details and DO NOT REPORT THIS PROBLEM TO THE PHP/Java Bridge MAILING LIST!
+java.lang.ClassNotFoundException: Unresolved external reference: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request. -- Unable to call constructor, see the README section "Java platform issues" for details and DO NOT REPORT THIS PROBLEM TO THE PHP/Java Bridge MAILING LIST!
+	at php.java.bridge.JavaBridge.getUnresolvedExternalReferenceException(JavaBridge.java:422)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:498)
+	at php.java.bridge.Request.handleRequest(Request.java:458)
+	at php.java.bridge.Request.handleRequests(Request.java:500)
+	at php.java.bridge.JavaBridge.handleRequests(JavaBridge.java:150)
+	at php.java.bridge.JavaBridgeRunner.doPut(JavaBridgeRunner.java:207)
+	at php.java.bridge.http.HttpServer.service(HttpServer.java:289)
+	at php.java.bridge.http.HttpServer$Runner.run(HttpServer.java:205)
+	at php.java.bridge.ThreadPool$Delegate.run(ThreadPool.java:60)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class com.hitrust.B2B.request.DZ008Request
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at php.java.bridge.Util.classForName(Util.java:1518)
+	at php.java.bridge.JavaBridge.CreateObject(JavaBridge.java:445)
+	... 7 more
