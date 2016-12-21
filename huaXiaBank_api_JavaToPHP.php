@@ -8,7 +8,7 @@
 date_default_timezone_set('Asia/Shanghai');
 class HXB2B
 {
-    private $url = 'http://223.72.175.139:9080/dzserver/portal';
+    private $url = 'http://url/dzserver/portal';
     private $MerNum = '100131';
     //签到
     public function DZ015($MerTxSerNo)
@@ -31,14 +31,6 @@ class HXB2B
     public function DZ020($MerTxSerNo,$user_data){
         $xml_base = $this->get_base_req();
         $xml_body = "<DataBody><MerTxSerNo>".$MerTxSerNo."</MerTxSerNo><TrnxCode>DZ020</TrnxCode><AccountInfos>".
-            "<AccountInfo><MerAccountNo>84</MerAccountNo>".
-            "<AccountName>于施展<AccountName><AccountProp>1</AccountProp>".
-            "<RelatingAcct>6228480246098064768</RelatingAcct><RelatingAcctName>于施展</RelatingAcctName>".
-            "<InterBankFlag>1</InterBankFlag><RelatingAcctBank>农业银行</RelatingAcctBank><RelatingAcctBankAddr>市北区</RelatingAcctBankAddr><RelatingAcctBankCode>12</RelatingAcctBankCode>".
-            "<Amt>1.00</Amt><AmtUse>1.00</AmtUse><PersonName>于施展</PersonName>".
-            "<OfficeTel>05323881873</OfficeTel><MobileTel>18615016234</MobileTel>".
-            "<Addr>北京</Addr><ZipCode>100100</ZipCode><LawName>于施展</LawName><LawType>1</LawType>".
-            "<LawNo>210000000000000000</LawNo><NoteFlag>1</NoteFlag><NotePhone>18615016234<NotePhone>".
             "<EMail>ohdas@163.com</EMail><CheckFlag>0</CheckFlag></AccountInfo></AccountInfos>".
             "</DataBody>";
         $xml_msg = $xml_base . $xml_body;
