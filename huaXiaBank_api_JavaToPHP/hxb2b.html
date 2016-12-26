@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="PHPDoctor 2.0.5 (http://peej.github.com/phpdoctor/)">
+<meta name="when" content="Thu, 22 Dec 2016 09:33:04 +0000">
+
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="start" href="../namespaces.html">
+
+<title>HXB2B (HXBB2B API)</title>
+
+</head>
+<body id="definition">
+
+<header><h1>HXBB2B API</h1><span>Class</span>
+
+<h2>HXBB2B API\HXB2B</h2>
+
+</header><p class="signature">public  class <strong>HXB2B</strong></p>
+
+<div class="comment"><p>Created by PhpStorm.
+User: kung
+Date: 16-12-20
+Time: 上午11:28</p></div>
+
+<h3>Methods</h3>
+<table>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ007">DZ007</a>($MerTxSerNo 交易市场流水号, $send_data array('BankTxSerNo, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ008">DZ008</a>($MerTxSerNo 交易市场流水号, $BatchNo 清算批次, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed BatchNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ009">DZ009</a>($MerTxSerNo 交易市场流水号, $BatchNo 清算批次, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed BatchNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ010">DZ010</a>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ012">DZ012</a>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ015">DZ015</a>($MerTxSerNo 交易市场流水号, mixed MerTxSerNo)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ016">DZ016</a>($MerTxSerNo 交易市场流水号, mixed MerTxSerNo)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ017">DZ017</a>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ018">DZ018</a>($MerTxSerNo 交易市场流水号, $date Y-m-d, mixed MerTxSerNo, mixed date)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ020">DZ020</a>($MerTxSerNo 交易市场流水号, $send_data array('MerAccountNo, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ021">DZ021</a>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ022">DZ022</a>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ032">DZ032</a>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ033">DZ033</a>($MerTxSerNo 交易市场流水号, $send_data array('MerAccountNo, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ034">DZ034</a>($MerTxSerNo 交易市场流水号, $send_data 摊位号, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+<tr>
+<td class="type"> SimpleXMLElement</td>
+<td class="description"><p class="name"><a href="#DZ035">DZ035</a>($MerTxSerNo 交易市场流水号, $send_data array('MerAccountNo, mixed MerTxSerNo, mixed send_data)</p><p class="description"></p></td>
+</tr>
+</table>
+
+<h3>Details</h3>
+<code class="signature" id="DZ007">public  SimpleXMLElement <strong>DZ007</strong>($MerTxSerNo 交易市场流水号, $send_data array('BankTxSerNo, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 出金审核结果发送</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('BankTxSerNo' - => 银行流水账号,'AccountNo' => 子账户,'MerAccountNo' => 摊位号, 'Amt' => 总金额'channelType' => 0 快速到账 1 跨行清算'Result' => 0 拒绝 1 通过)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ008">public  SimpleXMLElement <strong>DZ008</strong>($MerTxSerNo 交易市场流水号, $BatchNo 清算批次, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed BatchNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td width=100> 清算</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td></td>
+<td>array('AccountNo'=> - 子账号, 'MerAccountNo' => 交易市场摊位号, 'Type' => 1：正常交易（仅对子账号进行借贷）；02：冻结资金 'Amt' => 金额, 'Flag' => 1 借 2 贷, 'Remark' => 备注)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ009">public  SimpleXMLElement <strong>DZ009</strong>($MerTxSerNo 交易市场流水号, $BatchNo 清算批次, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed BatchNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 对账</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td></td>
+<td>array('AccountNo'=> - 子账号, 'MerAccountNo' => 摊位号, 'Amt'=> 总金额 ,'AmtUse'=> 可用余额)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ010">public  SimpleXMLElement <strong>DZ010</strong>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 同步子账号</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('AccountNo'=> - 子账号, 'MerAccountNo' => 摊位号, 'AccountName'=>账户姓名, 'AccountProp'=> 0 企业 1 个人 'Amt'=> 总金额 ,'AmtUse'=> 可用余额, 'PersonName'=> 联系人, 'OfficeTel'=> 办公电话, 'MobileTel' => 移动电话)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ012">public  SimpleXMLElement <strong>DZ012</strong>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 交易商解约</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('AccountNo' - => 子账号, 'MerAccountNo' => 摊位号)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ015">public  SimpleXMLElement <strong>DZ015</strong>($MerTxSerNo 交易市场流水号, mixed MerTxSerNo)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 签到</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ016">public  SimpleXMLElement <strong>DZ016</strong>($MerTxSerNo 交易市场流水号, mixed MerTxSerNo)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 签退</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ017">public  SimpleXMLElement <strong>DZ017</strong>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 交易市场出金</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('AccountNo'=> - 子账号, 'MerAccountNo' => 摊位号, 'Amt' => 总金额, 'channelType' => 0 快速到账 1 跨行清算)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ018">public  SimpleXMLElement <strong>DZ018</strong>($MerTxSerNo 交易市场流水号, $date Y-m-d, mixed MerTxSerNo, mixed date)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 出入金明细核对</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ020">public  SimpleXMLElement <strong>DZ020</strong>($MerTxSerNo 交易市场流水号, $send_data array('MerAccountNo, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 签约子账号</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('MerAccountNo' - => 摊位号, 'AccountName'=>子账号名称, 'AccountProp' => 性质 0 企业 1个人, 'RelatingAcct'=> 关联卡号, 'RelatingAcctName' => 关联账户名, 'InterBankFlag' => 跨行标识：0-本行 1-跨行（★）只能填1, 'RelatingAcctBank' => 绑定出金账户开户行（跨行时需要）,'RelatingAcctBankAddr' => 绑定出金账户开户行地址（跨行时需要）, 'RelatingAcctBankCode' => 绑定出金账户开户行支付系统行号（跨行时需要）,'Amt' => 总金额, 'AmtUse'=> 可用金额, 'PersonName'=>联系人（子账户性质为企业时必须）,'OfficeTel' => 办公电话（子账户性质为企业时必须）, 'MobileTel'=> 移动电话（子账户性质为企业时必须）, 'Addr'=> 联系地址（子账户性质为企业时必须）, 'ZipCode' => 邮编, 'LawName'=>法人姓名（子账户性质为企业时必须）, 'LawType'=> 证件类型1 ? 个人身份证 2 ? 军人证、警官证 3 ? 临时证件 4 ? 户口本 5 ? 护照 6 ? 其他, 'LawNo' => 证件号码,'NoteFlag'=>是否需要短信通知：1-需要，0-不需要, 'NotePhone'=>短信通知手机号码,'EMail'=>电子邮箱, 'CheckFlag'=> 复核标识 1：需要 0:不需要)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ021">public  SimpleXMLElement <strong>DZ021</strong>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 入金申请</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('AccountNo'=> - 子账号, 'MerAccountNo'=> 摊位号, 'Amt'=>金额,'PasswordChar'=> 个人卡支付密码)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ022">public  SimpleXMLElement <strong>DZ022</strong>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 入金登记申请</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('AccountNo'=> - 子账号, 'MerAccountNo'=> 摊位号,'Amt' => 金额, 'InOutStart'=>1 他行现金汇款，2他行转账汇款, 'PersonName' => 汇款人姓名, 'AmoutDate'=>汇款日期,'BankName'=>汇款银行, 'OutAccount'=> 汇款账号)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ032">public  SimpleXMLElement <strong>DZ032</strong>($MerTxSerNo 交易市场流水号, $send_data array('AccountNo'=>, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 银行子账户余额查询</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('AccountNo'=> - 子账号, 'MerAccountNo'=> 摊位号)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ033">public  SimpleXMLElement <strong>DZ033</strong>($MerTxSerNo 交易市场流水号, $send_data array('MerAccountNo, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 新增子账号同步</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('MerAccountNo' - => 摊位号, 'AccountName'=>子账号名称, 'AccountProp' => 性质 0 企业 1个人, 'EnterNetBankNo' => 企业客户号, 'LawName'=>法人姓名（子账户性质为企业时必须）, 'CertType'=> 证件类型 1 身份证 4户口 5 护照, 'CertNo' => 证件号码,'PersonName' => 联系人, 'OfficeTel' => 办公电话, 'Addr'=>企业地址, 'Email'=> 邮箱, 'ZipCode'=> 邮编 'NoteFlag'=>是否需要短信通知：1-需要，0-不需要, 'NotePhone'=>短信通知手机号码,'EMail'=>电子邮箱, 'CheckFlag'=> 复核标识 1：需要 0:不需要)</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ034">public  SimpleXMLElement <strong>DZ034</strong>($MerTxSerNo 交易市场流水号, $send_data 摊位号, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 子账户信息查询</td>
+</tr></table>
+</div>
+
+<code class="signature" id="DZ035">public  SimpleXMLElement <strong>DZ035</strong>($MerTxSerNo 交易市场流水号, $send_data array('MerAccountNo, mixed MerTxSerNo, mixed send_data)</code>
+<div class="details">
+<p></p><table>
+<tr><th>Author</th>
+<td>kung </td><td> 子账户签约，只用于他行客户和个人</td>
+</tr><tr><th>Parameters</th>
+<td></td>
+<td>array('MerAccountNo' - => 摊位号, 'AccountName'=>子账号名称, 'AccountProp' => 性质 0 企业 1个人, 'RelatingAcct'=> 关联卡号, 'RelatingAcctName' => 关联账户名, 'InterBankFlag' => 跨行标识：0-本行 1-跨行（★）只能填1, 'RelatingAcctBank' => 绑定出金账户开户行（跨行时需要）,'RelatingAcctBankAddr' => 绑定出金账户开户行地址（跨行时需要）, 'RelatingAcctBankCode' => 绑定出金账户开户行支付系统行号（跨行时需要）,'Amt' => 总金额, 'AmtUse'=> 可用金额, 'PersonName'=>联系人（子账户性质为企业时必须）,'OfficeTel' => 办公电话（子账户性质为企业时必须）, 'MobileTel'=> 移动电话（子账户性质为企业时必须）, 'Addr'=> 联系地址（子账户性质为企业时必须）, 'ZipCode' => 邮编, 'LawName'=>法人姓名（子账户性质为企业时必须）, 'LawType'=> 证件类型1 ? 个人身份证 2 ? 军人证、警官证 3 ? 临时证件 4 ? 户口本 5 ? 护照 6 ? 其他, 'LawNo' => 证件号码,'NoteFlag'=>是否需要短信通知：1-需要，0-不需要, 'NotePhone'=>短信通知手机号码,'EMail'=>电子邮箱, 'CheckFlag'=> 复核标识 1：需要 0:不需要)</td>
+</tr></table>
+</div>
+
+
+</body>
+
+</html>
