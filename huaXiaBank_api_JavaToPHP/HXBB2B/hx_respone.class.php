@@ -12,7 +12,16 @@ class HX_respone {
     private $xml_obj;
     private $xml_data;
     private $TrnxCode;
+    private $db;
+    private $serial_number;
+    private $bankTxSerNo;
 
+    public function __construct($db)
+    {
+        $this->db = $db;
+        $this->serial_number = $this->get_serial_number();
+    }
+    
 
     public function get_data(){
         $this->get_content();
@@ -20,7 +29,12 @@ class HX_respone {
         $result = '';
         $check_result = $this->check_sign();
         if($check_result){
-            $this->TrnxCode = $this->xml_obj->TrnxCode;
+            $trcode = $this->xml_obj->TrnxCode;
+            $trcode = (array)$trcode;
+            $this->TrnxCode = $trcode[0];
+            $bankTxSerNo = $this->xml_obj->DataBody->BankTxSerNo;
+            $bankTxSerNo = (array)$bankTxSerNo;
+            $this->bankTxSerNo = $bankTxSerNo[0];
             if($this->TrnxCode == 'DZ001')
                 $result = $this->DZ001();
             if($this->TrnxCode == 'DZ002')
@@ -38,14 +52,26 @@ class HX_respone {
      * @param $data array('BankTxSerNo'=>银行流水号，'TrnxCode'=>交易代码, 'MerTxSerNo'=>交易市场流水号)
      * @return string
      */
-    public function response_data($data){
+    public function response_data(){
         $base = $this->get_response_header();
         $result = "<DataBody>".
-            "<BankTxSerNo>".$data['BankTxSerNo']."</BankTxSerNo>".
-            "<TrnxCode>".$data['TrnxCode']."</TrnxCode>".
-            "<MerTxSerNo>".$data['MerTxSerNo']."</MerTxSerNo>".
+            "<BankTxSerNo>". $this->bankTxSerNo ."</BankTxSerNo>".
+            "<TrnxCode>". $this->TrnxCode ."</TrnxCode>".
+            "<MerTxSerNo>". $this->serial_number ."</MerTxSerNo>".
             "</DataBody>";
         return $this->export_xml($base . $result);
+    }
+
+    private function microtime_float()
+    {
+        list($usec, $sec) = explode(" ", microtime());
+        return ((float)$usec + (float)$sec);
+    }
+
+    private function get_serial_number(){
+        $micro_time =  $this->microtime_float();
+        $micro_arr = explode('.',$micro_time);
+        return date('YmdHis').substr($micro_arr[1],0,2);
     }
 
     private function get_content(){
@@ -82,61 +108,68 @@ class HX_respone {
 
     private function DZ001(){
         $result = array();
-        $result['BankTxSerNo'] = $this->xml_obj->DataBody->BankTxSerNo;
-        $result['TrnxCode'] = $this->xml_obj->DataBody->TrnxCode;
-        foreach($this->xml_obj->DataBody->AccountInfos as $accountInfo){
-            $accountInfo_arr['AccountNo'] = $accountInfo->AccountNo;
-            $accountInfo_arr['MerAccountNo'] = $accountInfo->MerAccountNo;
-            $accountInfo_arr['AccountName'] = $accountInfo->AccountName;
-            $accountInfo_arr['AccountProp'] = $accountInfo->AccountProp;
-            $accountInfo_arr['Amt'] = $accountInfo->Amt;
-            $accountInfo_arr['AmtUse'] = $accountInfo->AmtUse;
-            $accountInfo_arr['PersonName'] = $accountInfo->PersonName;
-            $accountInfo_arr['OfficeTel'] = $accountInfo->OfficeTel;
-            $accountInfo_arr['MobileTel'] = $accountInfo->MobileTel;
-            $accountInfo_arr['Addr'] = $accountInfo->Addr;
-            $result['accountInfos'][] = $accountInfo_arr;
+        $bankTxSerNo = $this->xml_obj->DataBody->BankTxSerNo;
+        $bankTxSerNo = (array)$bankTxSerNo;
+//        $result['BankTxSerNo'] = $bankTxSerNo[0];
+        $trnxCode = $this->xml_obj->DataBody->TrnxCode;
+        $trnxCode = (array)$trnxCode;
+//        $result['TrnxCode'] = $trnxCode[0];
+        $accountInfos = $this->xml_obj->DataBody->AccountInfos;
+        $accountInfos = (array)$accountInfos;
+        foreach($accountInfos['AccountInfo'] as $accountInfo){
+            $accountInfo = (array)$accountInfo;
+            $accountInfo['BankTxSerNo'] = $bankTxSerNo[0];
+            $accountInfo['TrnxCode'] = $trnxCode[0];
+            $accountInfo['serial_number'] = $this->serial_number;
+            $result[] = $accountInfo;
         }
-        return $result;
+        foreach($result as $result_val){
+            $this->db->autoExecute('ecs_hxb2b_DZ001',$result_val,"INSERT");
+        }
+        return true;
     }
 
     private function DZ002(){
-        $result = array();
-        $result['BankTxSerNo'] = $this->xml_obj->DataBody->BankTxSerNo;
-        $result['TrnxCode'] = $this->xml_obj->DataBody->TrnxCode;
-        $result['AccountNo'] = $this->xml_obj->DataBody->AccountNo;
-        $result['MerAccountNo'] = $this->xml_obj->DataBody->MerAccountNo;
-        $result['Amt'] = $this->xml_obj->DataBody->Amt;
-        $result['Balance'] = $this->xml_obj->DataBody->Balance;
-        $result['BalanceUse'] = $this->xml_obj->DataBody->BalanceUse;
-        $result['reject'] = $this->xml_obj->DataBody->reject;
-        $result['Result'] = $this->xml_obj->DataBody->Result;
-        return $result;
+        $dataBody = $this->xml_obj->DataBody;
+        $dataBody = (array)$dataBody;
+        foreach($dataBody as $dataBody_val){
+            $dataBody_val['serial_number'] = $this->serial_number;
+            $this->db->autoExecute('ecs_hxb2b_DZ002',$dataBody_val,"INSERT");
+        }
+        return true;
     }
 
     private function DZ003(){
-        $result = array();
-        $result['BankTxSerNo'] = $this->xml_obj->DataBody->BankTxSerNo;
-        $result['TrnxCode'] = $this->xml_obj->DataBody->TrnxCode;
-        $result['AccountNo'] = $this->xml_obj->DataBody->AccountNo;
-        $result['MerAccountNo'] = $this->xml_obj->DataBody->MerAccountNo;
-        $result['Amt'] = $this->xml_obj->DataBody->Amt;
-        $result['Balance'] = $this->xml_obj->DataBody->Balance;
-        $result['BalanceUse'] = $this->xml_obj->DataBody->BalanceUse;
-        return $result;
+        $dataBody = $this->xml_obj->DataBody;
+        $dataBody = (array)$dataBody;
+        foreach($dataBody as $dataBody_val){
+            $dataBody_val['serial_number'] = $this->serial_number;
+            $this->db->autoExecute('ecs_hxb2b_chujin',$dataBody_val,"INSERT");
+        }
+        return true;
     }
 
     private function DZ004(){
         $result = array();
-        $result['BankTxSerNo'] = $this->xml_obj->DataBody->BankTxSerNo;
-        $result['TrnxCode'] = $this->xml_obj->DataBody->TrnxCode;
-        foreach($this->xml_obj->DataBody->AccountInfos as $accountInfo){
-            $accountInfo_arr['AccountNo'] = $accountInfo->AccountNo;
-            $accountInfo_arr['MerAccountNo'] = $accountInfo->MerAccountNo;
-            $accountInfo_arr['AccountName'] = $accountInfo->AccountName;
-            $result['accountInfos'][] = $accountInfo_arr;
+        $bankTxSerNo = $this->xml_obj->DataBody->BankTxSerNo;
+        $bankTxSerNo = (array)$bankTxSerNo;
+//        $result['BankTxSerNo'] = $bankTxSerNo[0];
+        $trnxCode = $this->xml_obj->DataBody->TrnxCode;
+        $trnxCode = (array)$trnxCode;
+//        $result['TrnxCode'] = $trnxCode[0];
+        $accountInfos = $this->xml_obj->DataBody->AccountInfos;
+        $accountInfos = (array)$accountInfos;
+        foreach($accountInfos['AccountInfo'] as $accountInfo){
+            $accountInfo = (array)$accountInfo;
+            $accountInfo['BankTxSerNo'] = $bankTxSerNo[0];
+            $accountInfo['TrnxCode'] = $trnxCode[0];
+            $accountInfo['serial_number'] = $this->serial_number;
+            $result[] = $accountInfo;
         }
-        return $result;
+        foreach($result as $result_val){
+            $this->db->autoExecute('ecs_hxb2b_DZ004',$result_val,"INSERT");
+        }
+        return true;
     }
 
     private function get_response_header(){

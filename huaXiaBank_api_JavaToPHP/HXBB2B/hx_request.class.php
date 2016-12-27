@@ -419,7 +419,7 @@ class HXB2B
     }
 
     private function send_xml($xml_msg){
-//        $xml_msg = mb_convert_encoding($xml_msg,'gb2312','utf-8');
+        $xml_msg = mb_convert_encoding($xml_msg,'gb2312','utf-8');
         $signature_str = $this->sign($xml_msg);
         $content = "<MessageData>" . $xml_msg . "</MessageData>" .
         "<SignData><Signature>$signature_str</Signature><Signature-Algorithm>SHA1withRSA</Signature-Algorithm></SignData>";
@@ -429,7 +429,7 @@ class HXB2B
         $xml_data = '<?xml version="1.0"?><HXBB2B>' . $content_arr['content'] . '</HXBB2B>';
 //        $xml_data = mb_convert_encoding($xml_data,'gbk','utf-8');
         $post_data = $this->get_post_data($content_arr['length'], $xml_data);
-echo $post_data;//exit;
+//echo $post_data;
         $res = $this->post_url($this->url, $post_data);
         $result = $this->exec_res($res);
         return $result;
@@ -446,8 +446,8 @@ echo $post_data;//exit;
         $xml_res = new SimpleXMLElement($res);
         $xml_result = base64_decode($xml_res);
         $xml_uncompress = gzuncompress($xml_result);
-var_dump($xml_uncompress);
-//        $xml_uncompress = mb_convert_encoding($xml_uncompress,'utf-8','gbk');
+//var_dump($xml_uncompress);
+        $xml_uncompress = mb_convert_encoding($xml_uncompress,'utf-8','gbk');
 
         $xml_obj = new SimpleXMLElement("<HXB2B>" . $xml_uncompress . "</HXB2B>");
         return $xml_obj;
