@@ -464,7 +464,7 @@ if($act == 'duizhang'){
         }
 
     }
-    $sql = "insert into " . $ecs->table('ecs_hxbb2b_log') . " set serial_number='{$serial_number}',act_code='DZ008'," .
+    $sql = "insert into " . $ecs->table('ecs_hxbb2b_log') . " set serial_number='{$serial_number}',act_code='DZ009'," .
         "`action`='{$message}',code_res='{$code_res}'";
     $db->query($sql);
 }

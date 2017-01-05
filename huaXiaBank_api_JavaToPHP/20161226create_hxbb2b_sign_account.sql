@@ -213,4 +213,25 @@ created_at TIMESTAMP not null default CURRENT_TIMESTAMP,
 PRIMARY key(id)
 )engine=innodb default charset=utf8;
 
+CREATE TABLE `ecs_balance_error_log` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `info` varchar(255) NOT NULL,
+  `supplier_id` int(10) NOT NULL,
+  `time` int(10) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `time` (`time`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+create table ecs_hxb2b_account_surrender(
+id int(11) not null auto_increment,
+serial_number varchar(255) not null default '' comment '交易市场流水号',
+AccountNo varchar(255) not null default '' comment '子账号',
+MerAccountNo int(11) not null default '0' comment '摊位号',
+DealerOperNo VARCHAR (255) not null default '' comment '操作员代码',
+ErrorInfo VARCHAR (255) null comment '错误信息',
+created_at datetime not null default '0000-00-00 00:00:00' ,
+updated_at timestamp not null default CURRENT_TIMESTAMP ,
+PRIMARY key(id)
+)engine=innodb default charset=utf8;
+
 

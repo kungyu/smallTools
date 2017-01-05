@@ -125,6 +125,18 @@ class HX_respone {
         }
         foreach($result as $result_val){
             $this->db->autoExecute('ecs_hxb2b_DZ001',$result_val,"INSERT");
+            $sql = "select AccountNo,MerAccountNo from ecs_hxb2b_account WHERE MerAccountNo = '{$result_val['MerAccountNo']}'";
+            $account_check = $this->db->getRow($sql);
+            if(!empty($account_check)){
+                $sql = "update ecs_hxb2b_account set AccountNo = '{$result_val['AccountNo']}' WHERE MerAccountNo = '{$result_val['MerAccountNo']}'";
+            }else{
+                $sql = "insert into ecs_hxb2b_account set AccountNo = '{$result_val['AccountNo']}',MerAccountNo = '{$result_val['MerAccountNo']}'";
+            }
+            $this->db->query($sql);
+            $user_money = $result_val['Amt'];
+            $frozen_money = (float)$result_val['Amt'] - (float)$result_val['AmtUse'];
+            $sql = "update ecs_users set user_money = '{$user_money}',frozen_money = '{$frozen_money}' where user_id = '{$result_val['MerAccountNo']}'";
+            $this->db->query($sql);
         }
         return true;
     }
@@ -132,10 +144,13 @@ class HX_respone {
     private function DZ002(){
         $dataBody = $this->xml_obj->DataBody;
         $dataBody = (array)$dataBody;
-        foreach($dataBody as $dataBody_val){
-            $dataBody_val['serial_number'] = $this->serial_number;
-            $this->db->autoExecute('ecs_hxb2b_DZ002',$dataBody_val,"INSERT");
-        }
+
+        $dataBody['serial_number'] = $this->serial_number;
+        $this->db->autoExecute('ecs_hxb2b_DZ002',$dataBody,"INSERT");
+        $user_money = $dataBody['Balance'];
+        $frozen_money = (float)$dataBody['Balance'] - (float)$dataBody['BalanceUse'];
+        $sql = "update ecs_users set user_money = '{$user_money}', frozen_money = '{$frozen_money}' where user_id = '{$dataBody['MerAccountNo']}'";
+        $this->db->query($sql);
         return true;
     }
 
@@ -168,6 +183,10 @@ class HX_respone {
         }
         foreach($result as $result_val){
             $this->db->autoExecute('ecs_hxb2b_DZ004',$result_val,"INSERT");
+            $sql = "insert into ecs_hxb2b_account_surrender select *,null from ecs_hxb2b_account  where MerAccountNo = '{$result_val['MerAccountNo']}'";
+            $this->db->query($sql);
+            $sql = "delete from ecs_hxb2b_account  where MerAccountNo = '{$result_val['MerAccountNo']}'";
+            $this->db->query($sql);
         }
         return true;
     }
