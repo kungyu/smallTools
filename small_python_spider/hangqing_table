@@ -1,0 +1,25 @@
+create table today_market(
+id int(11) unsigned auto_increment,
+name varchar(255) not null default '',
+model varchar(255) not null default '',
+company varchar(255) not null default '',
+district varchar(255) not null default '',
+price varchar(255) not null default '',
+unit_price varchar(255) not null default '',
+up_down varchar(255) not null default '',
+price_cond varchar(255) not null default '',
+updated_at date not null default '0000-00-00',
+created_at timestamp not null default CURRENT_TIMESTAMP,
+primary key (id)
+)engine=innodb default charset=utf8 comment '塑料耗材今日行情信息表';
+
+
+#shell
+sqlname="today_price_`date +%Y-%m-%d`.sql"
+dir="/home/wwwroot/hangqing_spider"
+host="127.0.0.1"  
+user="root"  
+passwd="root"  
+dbname="spider"
+
+mysql -h$host -u$user -p$passwd $dbname < $dir/$sqlname
