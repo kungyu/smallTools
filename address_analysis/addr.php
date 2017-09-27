@@ -126,7 +126,7 @@
       $user_info = array($sheng,$shi,$qu,$tel,$name);
       $user_info_rep = array('','','','','');
       $addr = str_replace($user_info,$user_info_rep,$addr_local);
-        $arr_special = array(',,','..',' ','，，','。',':','：','，','-',';','；');
+        $arr_special = array(',,','..',' ','，，','。',':','：','，','-',';','；','.');
         $arr_special_rep = array_pad(array(),count($arr_special),'');
         $addr = str_replace($arr_special,$arr_special_rep,$addr);
         $none_str = array('收件人','手机','号码','电话','名字','姓名','发件人','发货人','收货人','地址');
@@ -156,6 +156,7 @@
 private function get_district($addr,$province,$citys){
         $shi = $sheng = $qu = '';
         $citys_keys = array_keys($citys);
+        //首先匹配带市的三个字
         preg_match_all('/(.{6})市/', $addr, $arr);
         if(!empty($arr) && !empty($arr[0])){
             foreach($arr as $arr_val){
@@ -177,6 +178,7 @@ private function get_district($addr,$province,$citys){
                 }
             }
         }
+        //匹配带市的四个字
         if(empty($shi)){
             preg_match_all('/(.{9})市/', $addr, $arr);
             if(!empty($arr) && !empty($arr[0])){
@@ -192,6 +194,7 @@ private function get_district($addr,$province,$citys){
         }
 
 
+        //当省为空的时候
         if(empty($sheng))
             foreach($province as $key=>$val){
                 if(empty($sheng) && !empty($shi)) {
@@ -201,10 +204,13 @@ private function get_district($addr,$province,$citys){
                         break;
                     }
                 }
+                //遍历省下所有地级市
                 if(empty($sheng) && empty($shi)){
                     foreach ($val as $city_item) {
-                        if (mb_strlen($city_item) >= 3)
+                        if (mb_strlen($city_item) == 3)
                             $city_item_sub = mb_substr($city_item, 0, 2);
+                        elseif(mb_strlen($city_item) > 3)
+                            $city_item_sub = mb_substr($city_item, 0, 3);
                         else
                             $city_item_sub = $city_item;
                         if (mb_strpos($addr, $city_item_sub) !== false) {
@@ -235,6 +241,7 @@ private function get_district($addr,$province,$citys){
                 }
             }
 
+            //省份依旧为空 遍历所有省
         if(empty($sheng)){
             foreach($province as $province_key => $province_val){
                 $province_sub = mb_substr($province_key,0,2);
@@ -245,8 +252,10 @@ private function get_district($addr,$province,$citys){
             }
         }
 
+        //遍历所有城市查找地级市
         if(empty($shi) && (empty($sheng) || empty($qu))){
             if(!empty($sheng)){
+                $conte = 0;
                 foreach($province[$sheng] as $province_val){
                     $city_name = isset($citys[$province_val])?$province_val:$province_val.'市';
                     foreach($citys[$city_name] as $city_item){
@@ -256,12 +265,21 @@ private function get_district($addr,$province,$citys){
                         else
                             $city_val_sub = mb_substr($city_item, 0, 3);
                         if (mb_strpos($addr, $city_val_sub) !== false) {
-                            $shi = $city_name;
-                            $qu = $city_item;
-                            break;
+
+                            if(mb_substr($city_item,-1) == '区' && empty($shi)) {
+                                $conte = 1;
+                                $shi = $city_name;
+                                $qu = $city_item;
+                            }else{
+                                $shi = $city_name;
+                                $qu = $city_item;
+                                $conte = 0;
+                                break;
+                            }
+
                         }
                     }
-                    if($shi)
+                    if($shi && !$conte)
                         break;
                 }
             }
@@ -292,6 +310,7 @@ private function get_district($addr,$province,$citys){
             }
         }
 
+        //根据市遍历查找区
         if(empty($qu) && !empty($shi)){
 
             foreach ($citys[$shi] as $city_val) {
