@@ -7,7 +7,7 @@
         $addr=$this->input->post('addr');
         $addr_local = $addr;
         $what_arr = array("。","&#x3002;","，","&#65292;","…","&#8230;",',','.',' ',"\xc2\xa0","\n","\r","\t",'"',"'",'“',"‘",'!','！',':','：',';','`','`','~','～','(',')','（','）','|','|','\\','/','?','>','<','《','》','*','×','#','#','@','@','%','%',
-            '名字','姓名','收件人','收货人','收货方','发件人','发货人','发件方','发货方','手机','电话','-','；');
+            '名字','姓名','收件人','收货人','收货方','发件人','发货人','发件方','发货方','手机','电话','-','；','.');
         $what_arr_org = array_pad(array(),count($what_arr),'');
         $addr_orig = str_replace($what_arr,$what_arr_org,$addr);
         $addr = str_replace('-','',$addr);
@@ -24,8 +24,9 @@
         $result['qu'] = $qu;
         $result['tel'] = '';
         $addr = str_replace($qu,'|',$addr);
+        $get_tel = str_replace('|','',$addr);
 //        preg_match('/[^0-9+]*(?P<tel>(\+86[0-9]{11})|([0-9]{11})|([0-9]{3,4}-[0-9]{7,10}))[^0-9+]*/',$addr,$tels);
-        preg_match("/1[34578]\d{9}/", $addr, $tels);
+        preg_match("/1[34578]\d{9}/", $get_tel, $tels);
         $tel = '';
 
         if(!empty($tels)) {
@@ -57,34 +58,35 @@
             }
         }
         $sub_len = 99;
-        foreach($arr_name as $name_val){
-            $name_pos = mb_strpos($addr_orig,$name_val);
-            $name_len = mb_strlen($name_val);
-            $tel_pos  = mb_strpos($addr_orig,$tel);
-            if(($name_pos + $name_len) == $tel_pos || $tel_pos + 11 == $name_pos){
-                $name = $name_val;
-                break;
-            }
-            if($name_pos < $tel_pos){
-                if($tel_pos - $name_pos  < $name_len + 3){
-                    $sub_len_son = $tel_pos - $name_pos;
-                    if($sub_len_son < $sub_len) {
-                        $sub_len = $sub_len_son;
-                        $name = $name_val;
+        if(!empty($arr_name))
+            foreach($arr_name as $name_val){
+                $name_pos = mb_strpos($addr_orig,$name_val);
+                $name_len = mb_strlen($name_val);
+                $tel_pos  = mb_strpos($addr_orig,$tel);
+                if(($name_pos + $name_len) == $tel_pos || $tel_pos + 11 == $name_pos){
+                    $name = $name_val;
+                    break;
+                }
+                if($name_pos < $tel_pos){
+                    if($tel_pos - $name_pos  < $name_len + 3){
+                        $sub_len_son = $tel_pos - $name_pos;
+                        if($sub_len_son < $sub_len) {
+                            $sub_len = $sub_len_son;
+                            $name = $name_val;
+                        }
                     }
                 }
-            }
-            if($tel_pos < $name_pos){
-                if($name_pos - $tel_pos < 14){
-                    $sub_len_son = $name_pos - $tel_pos;
-                    if($sub_len_son < $sub_len){
-                        $sub_len = $sub_len_son;
-                        $name = $name_val;
+                if($tel_pos < $name_pos){
+                    if($name_pos - $tel_pos < 14){
+                        $sub_len_son = $name_pos - $tel_pos;
+                        if($sub_len_son < $sub_len){
+                            $sub_len = $sub_len_son;
+                            $name = $name_val;
+                        }
                     }
                 }
-            }
 
-        }
+            }
 
         if(empty($name) && !empty($arr_name))
             $name = $arr_name[0];
@@ -126,10 +128,10 @@
       $user_info = array($sheng,$shi,$qu,$tel,$name);
       $user_info_rep = array('','','','','');
       $addr = str_replace($user_info,$user_info_rep,$addr_local);
-        $arr_special = array(',,','..',' ','，，','。',':','：','，','-',';','；','.');
+        $arr_special = array(',,','..',' ','，，','。',':','：','，','-',';','；','.',"\xc2\xa0","\n","\r","\t",);
         $arr_special_rep = array_pad(array(),count($arr_special),'');
         $addr = str_replace($arr_special,$arr_special_rep,$addr);
-        $none_str = array('收件人','手机','号码','电话','名字','姓名','发件人','发货人','收货人','地址');
+        $none_str = array('收件人','手机','号码','电话','名字','姓名','发件人','发货人','收货人','地址','收货');
         $none_str_rep = array_pad(array(),count($none_str),'');;
         $addr = str_replace($none_str,$none_str_rep,$addr);
         $addr = str_replace($tel,'',$addr);
@@ -326,9 +328,14 @@ private function get_district($addr,$province,$citys){
                     break;
             }
         }
+
+        if($sheng == '北京市' || $sheng == '上海市' || $sheng == '重庆市' || $sheng == '天津市'){
+            $qu = $shi;
+            $shi = $sheng;
+        }
+
         return compact('sheng','shi','qu');
     }
-
 
 
 
